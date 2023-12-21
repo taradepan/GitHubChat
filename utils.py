@@ -119,7 +119,7 @@ class Embedder:
     
 
     def chain(self, query,reprompt="",max_count=5):
-        if max_count==4:
+        if max_count==5:
             reprompt = "you provided wrong output for the given query. try again, but DON'T repeat yourself. learn and improve from previous outputs: "
         a=llm(f"""{reprompt}
             Availabe Files:{self.fnames}
